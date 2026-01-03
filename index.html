@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Tâches Hebdomadaires</title>
+    <link rel="stylesheet" href="/asset/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="/asset/image/canvas.png" alt="logo" style="width: 150px; height: 150px;">
+            </div>
+            <div>
+                <h1>Gestion de Tâches Hebdomadaires</h1>
+                <div class="week-selector">
+                    <button class="week-btn active" onclick="showWeek('A')">Semaine A</button>
+                    <button class="week-btn" onclick="showWeek('B')">Semaine B</button>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: center; margin: 40px; margin-bottom: 0;">
+            <p><i>"La discipline est la boussole d'un équipage." - HECTOR BARBOSSA</i></p>
+        </div>
+
+        <div class="content">
+            <!-- Tableaux desktop -->
+            <div id="weekA" class="week-content day-content">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Tâches</th>
+                            <th>Lundi</th>
+                            <th>Mardi</th>
+                            <th>Mercredi</th>
+                            <th>Jeudi</th>
+                            <th>Vendredi</th>
+                            <th>Samedi</th>
+                            <th>Dimanche</th>
+                        </tr>
+                    </thead>
+                    <tbody id="scheduleA"></tbody>
+                </table>
+                <div id="mobileCardsA" class="day-cards"></div>
+            </div>
+
+            <div id="weekB" class="week-content day-content" style="display: none;">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Tâches</th>
+                            <th>Lundi</th>
+                            <th>Mardi</th>
+                            <th>Mercredi</th>
+                            <th>Jeudi</th>
+                            <th>Vendredi</th>
+                            <th>Samedi</th>
+                            <th>Dimanche</th>
+                        </tr>
+                    </thead>
+                    <tbody id="scheduleB"></tbody>
+                </table>
+                <div id="mobileCardsB" class="day-cards"></div>  
+            </div>
+
+            <!-- Tableau des binômes -->
+            <div id="binome" class="week-content">
+                <table class="schedule-table" id="binomeTable"></table>
+                <div id="mobileCardsBinome" class="day-cards"></div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-section">
+                <h2 class="stats-title">Tableau Récapitulatif Global</h2>
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Personne</th>
+                            <th>Tâches (Semaine A)</th>
+                            <th>Pauses (Semaine A)</th>
+                            <th>Tâches (Semaine B)</th>
+                            <th>Pauses (Semaine B)</th>
+                            <th>Total Tâches</th>
+                            <th>Total Pauses</th>
+                        </tr>
+                    </thead>
+                    <tbody id="statsBody"></tbody>
+                </table>
+
+                <h2 class="stats-title" style="margin-top: 50px;">Détail par Tâche (Semaines A + B)</h2>
+                <table class="stats-table">
+                    <thead>
+                        <tr id="taskStatsHeader">
+                            <th>Personne</th>
+                        </tr>
+                    </thead>
+                    <tbody id="taskStatsBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="/asset/script.js"></script>
+</body>
+</html>
