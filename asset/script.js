@@ -1,4 +1,4 @@
-const people = ['Francky', 'Eli Phanio', 'Mpiaro', 'Johny', 'Jack', 'Ferdinand', 'Faneva'];
+const people = ['Francky', 'Eli Phanio', 'Mpiaro', 'Johny', 'Jack', 'Ferdinand', 'Faneva', 'Juot'];
 const tasks = ['Couloir', 'Cuisine', 'Veranda', 'Réfectoire', 'Escalier', 'Douche + WC + serpilere'];
 const days = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
 
