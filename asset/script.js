@@ -1,6 +1,5 @@
-let people = JSON.parse(localStorage.getItem("people")) || [];
-let tasks  = JSON.parse(localStorage.getItem("tasks")) || [];
-
+const people = ['Francky', 'Eli Phanio', 'Mpiaro', 'Johny', 'Jack', 'Ferdinand', 'Faneva', 'Juot', 'Hoffman'];
+const tasks = ['Couloir', 'Cuisine', 'Veranda 1', 'Réfectoire', 'Escalier', 'Verenda 2', 'Douche + WC + serpilere'];
 const days = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
 
 function generateSchedule(week) {
