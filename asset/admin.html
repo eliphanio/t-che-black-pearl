@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin – Gestion des tâches</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .admin-container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.1);
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        input {
+            flex: 1;
+            padding: 10px;
+            font-size: 1em;
+        }
+
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+            border: none;
+            background: #667eea;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 8px;
+        }
+
+        .danger {
+            background: #dc3545;
+        }
+
+        .danger:hover {
+            opacity: .85;
+        }
+
+        .back {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Géstion des membres</h1>
+
+<div class="admin-container">
+
+    <!-- MEMBRES -->
+    <section>
+        <h2>Membres</h2>
+        <div class="form">
+            <input type="text" id="memberInput" placeholder="Nom du membre">
+            <button onclick="addMember()">Ajouter</button>
+        </div>
+        <ul id="memberList"></ul>
+    </section>
+
+    <!-- TACHES -->
+    <section>
+        <h2>Tâches</h2>
+        <div class="form">
+            <input type="text" id="taskInput" placeholder="Nom de la tâche">
+            <button onclick="addTask()">Ajouter</button>
+        </div>
+        <ul id="taskList"></ul>
+    </section>
+
+    <div class="back">
+        <a href="/index.html">⬅ Retour au planning</a>
+    </div>
+
+</div>
+
+<script src="/asset/admin.js"></script>
+</body>
+</html>
